@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Connection And Schema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="blogTitle">Database Connection And Schema</h1>
+            <span class="blogtag">technology</span>
+        </div>
+        <img src="./images/custom.jpeg" alt="Database Connection Illustration" class="featured-image">
+        <div class="date-read-time">
+            <p>10/19/2024 &nbsp; | &nbsp; 1 min read</p>
+        </div>
+        <div class="divider"></div>
+        <div class="blogContent">Database Connection
+            (Required Fields)
+            Need to have Username, Password, URLString & IP address should be allowed.</div>
+
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <div class="user-info">Signed in as: <span>@username04</span></div>
+            <textarea id="commentInput" placeholder="Add a comment..." maxlength="200"
+                oninput="updateCharacterCount()"></textarea>
+            <div class="character-count" id="charCount">200 characters remaining</div>
+            <button class="submit-btn" onclick="submitComment()">Submit</button>
+            <div class="comment-list" id="commentList">
+                <h3>Comments <span id="commentCount">(0)</span></h3>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

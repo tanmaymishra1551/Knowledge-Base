@@ -1,5 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
+
     margin: 0;
     padding: 0;
     background-color: #1a0b36;
@@ -10,6 +11,15 @@ body {
     display: none;
 }
 
+.search input {
+    background-color: #fff;
+    color: #1a0b36;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 14px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -18,9 +28,6 @@ body {
     background-color: #1a0b36;
 }
 
-#searchInput {
-    border-radius: 2px;
-}
 
 .logo {
     font-size: 24px;
@@ -93,7 +100,7 @@ body {
 }
 
 .blog-container img {
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -128,6 +135,227 @@ body {
 .blog-container button:hover {
     background-color: #594de3;
 }
+
+/* BLOG VIEW PAGE WITH COMMENT SECTION */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    color: #1a0b36;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.featured-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.date-read-time {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.comment-section {
+    border: 1px solid #00b8e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.comment-section .character-count {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.comment-section .submit-btn {
+    float: right;
+    background-color: #00b8e6;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.comment-section .submit-btn:hover {
+    background-color: #7e57c2;
+}
+
+.user-info {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.user-info span {
+    font-weight: bold;
+    color: #0077b5;
+}
+
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+
+.comment .username {
+    font-weight: bold;
+    color: #0077b5;
+}
+
+.comment .comment-text {
+    margin: 5px 0;
+}
+
+.comment .actions {
+    font-size: 12px;
+    color: #777;
+}
+
+.comment .actions a {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0077b5;
+}
+
+/* LOGIN CSS */
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form-group label {
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    /* text-align: left; */
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 
 /* FOOTER SECTION */
 .footer {

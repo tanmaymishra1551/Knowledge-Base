@@ -15,51 +15,49 @@
 <body>
     <nav class="navbar">
         <div class="logo">Unified Mentor</div>
-        <div class="search"> <input type="text" id="searchInput" placeholder="Search blogs..." onkeyup="searchBlogs()"></div>
+        <div class="search">
+            <input type="text" id="searchInput" class="actions btn" placeholder="Search blogs..."
+                onkeyup="searchBlogs()">
+        </div>
         <ul class="menu">
+            <li><a href="#">Home</a></li>
             <li><a href="#">Blogs</a></li>
-            <li><a href="#">Hall of Fame</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Our Collabs</a></li>
+            <li><a href="#">About Us</a></li>
         </ul>
         <div class="actions">
-            <a href="#" class="btn">Learner →</a>
-            <a href="#" class="btn">Job Seeker →</a>
+            <a href="./signin.html" class="btn">Login →</a>
+            <a href="./signup.html" class="btn">Register →</a>
         </div>
     </nav>
     <header class="hero-section">
-        <h1>LEARN WHAT COLLEGE DOESN'T TEACH YOU</h1>
-        <p>Tired of classrooms and outdated curriculums? Want a job-ready skill set that actually matters in the real
-            world? 80% of our graduates secure jobs in their desired fields within three months. Join over 10,000
-            students who have transformed their careers with Unified Mentor.</p>
+        <h1>KNOWLEDGE + INTELLIGENCE </h1>
+        <p>Reading is the conversation with the finest minds of the history. <br> Welcome to our blog site where you add up knowledge with your INTELLIGENCE.</p>
     </header>
     <section class="Blogs-section">
         <h1>Recommended Blogs</h1>
         <div class="course-container">
-            <div class="blog-container">
-                <img src="./images/Pic (1).jpg" alt="Python Course">
+            <div class="blog-container" data-slug="javascript">
+                <img src="./images/custom.jpeg" alt="javascript ">
                 <h3 class="blog-tag">Technology</h3>
-                <h2 class="blog-title">Python</h2>
-                <p>Python is one of the most demanded programming languages in the job market. Surprisingly, it is
-                    equally easy to learn and master Python. Let's commit our 100 days of code to Python!</p>
-                <button>Know More</button>
-            </div>
-            <div class="blog-container">
-                <img src="./images/Pic (1).jpg" alt="JavaScript Course">
-                <h3 class="blog-tag" >Technology</h3>
                 <h2 class="blog-title">JavaScript</h2>
-                <p>This latest JavaScript course comes with premium curriculum that covers everything from basics to
-                    advance. On top of that, you will get my handwritten notes of JS for completely free. What are you
-                    waiting for? Just Enroll Buddy</p>
-                <button>Know More</button>
+                <p class="blog-content">JavaScript in coding. Want to know more. Click on know more &#128071;</p>
+                <a onclick="redirectToBlog('javascript')"><button>Know More</button></a>
             </div>
-            <div class="blog-container">
-                <img src="./images/Pic (1).jpg" alt="React Course">
+            <div class="blog-container" data-slug="nodejs">
+                <img src="./images/custom.jpeg" alt="nodejs Course">
+                <h3 class="blog-tag">Technology</h3>
+                <h2 class="blog-title">Node JS</h2>
+                <p class="blog-content">This is Node JS</p>
+                <a onclick="redirectToBlog('nodejs')"><button>Know More</button></a>
+            </div>
+            <div class="blog-container" data-slug="reactjs">
+                <img src="./images/custom.jpeg" alt="React " class="blog-image">
                 <h3 class="blog-tag">Technology</h3>
                 <h2 class="blog-title">React JS </h2>
-                <p>React is a free and open-source front-end JavaScript library. This series will cover React from
+                <p class="blog-content">React is a free and open-source front-end JavaScript library. This series will
+                    cover React from
                     starting to the end. We will learn react from the ground up!</p>
-                <button>Know More</button>
+                <a onclick="redirectToBlog('reactjs')"><button>Know More</button></a>
             </div>
         </div>
     </section>
@@ -96,4 +94,5 @@
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>
