@@ -80,7 +80,7 @@ function updateCharacterCount() {
 
 // Handle the comment submission
 function submitComment(event) {
-  event.preventDefault(); // Prevent the form from refreshing the page
+  event.preventDefault();
 
   // Get input values
   const username = document.getElementById("username").value.trim();
@@ -111,3 +111,72 @@ function submitComment(event) {
   document.getElementById("commentInput").value = "";
   updateCharacterCount();
 }
+
+function toggleMenu() {
+  console.log("button is clicked");
+  const menu = document.getElementById("menu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
+
+const chatIcon = document.getElementById("chat-icon");
+const chatPrompt = document.getElementById("chat-prompt");
+const sendBtn = document.getElementById("send-btn");
+const userInput = document.getElementById("user-input");
+const messagesDiv = document.getElementById("messages");
+
+// Toggle Chat Prompt
+chatIcon.addEventListener("click", () => {
+  chatPrompt.style.display =
+    chatPrompt.style.display === "flex" ? "none" : "flex";
+});
+
+// Send Message
+sendBtn.addEventListener("click", () => {
+  const message = userInput.value.trim();
+  if (message) {
+    addMessage("user", message);
+    userInput.value = "";
+    generateBotResponse(message);
+  }
+});
+
+// Add Message to Chat
+function addMessage(sender, text) {
+  const messageDiv = document.createElement("div");
+  messageDiv.className = sender === "user" ? "user-message" : "bot-message";
+  messageDiv.textContent = text;
+  messagesDiv.appendChild(messageDiv);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+// Simulate Bot Response
+function generateBotResponse(userMessage) {
+  let response = "I'm here to help! Ask me anything.";
+  if (userMessage.toLowerCase().includes("hello")) {
+    response = "Hi there! How can I assist you today?";
+  }
+  addMessage("bot", response);
+}
+sendBtn.addEventListener("click", sendMessage);
+
+// Function to Send Message
+function sendMessage() {
+  const message = userInput.value.trim();
+  if (message) {
+    addMessage("user", message); // Add user message
+    userInput.value = ""; // Clear input field
+    generateBotResponse(message); // Simulate bot response
+  }
+}
+
+// Send Message on Enter Key Press
+userInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submission
+    sendMessage();
+  }
+});

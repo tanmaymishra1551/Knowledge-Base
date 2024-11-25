@@ -10,14 +10,15 @@
 
 <body>
     <nav class="navbar">
+        <div id="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
         <div class="logo">Unified Mentor</div>
         <div class="search">
             <input type="text" id="searchInput" class="actions btn" placeholder="Search blogs..."
                 onkeyup="searchBlogs()">
         </div>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
             <li><a href="#">About Us</a></li>
         </ul>
         <div class="actions">
@@ -25,6 +26,20 @@
             <a href="./signup.html" class="btn">Register →</a>
         </div>
     </nav>
+    <div class="menu-overlay" id="menu">
+        <div class="menu-header">
+            <span class="close" onclick="toggleMenu()">&times;</span>
+        </div>
+        <ul class="menu-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="cta">
+            <a href="./signin.html" class="btn"><button>Login → </button></a>
+            <a href="./signup.html" class="btn"><button>Register →</button></a>
+        </div>
+    </div>
     <header class="login-wrapper">
         <div class="login-container">
             <h2>Sign In</h2>
@@ -42,6 +57,22 @@
         </div>
         </form>
     </header>
+    <div id="chatbot">
+        <div id="chat-icon">
+            <img src="./images/custom.jpeg" alt="Chatbot Icon">
+        </div>
+        <!-- Chat Prompt -->
+        <div id="chat-prompt">
+            <div id="chat-header">Chat with us!</div>
+            <div id="chat-content">
+                <div id="messages"></div>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about">

@@ -84,8 +84,9 @@ body {
 
 .course-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 50px;
+    margin: 10px;
     flex-wrap: wrap;
 }
 
@@ -93,8 +94,9 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 25%;
     padding: 15px;
+    margin: 10px 0px;
     box-sizing: border-box;
     text-align: left;
 }
@@ -443,4 +445,305 @@ button:hover:not(:disabled) {
     padding: 10px;
     margin-top: 20px;
     font-size: 14px;
+}
+
+#hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+ /* Chatbot Circle */
+ #chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Chatbot Icon */
+#chat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0078d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+}
+
+#chat-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Chat Prompt */
+#chat-prompt {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+}
+
+/* Chat Header */
+#chat-header {
+    background-color: #0078d7;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Chat Content */
+#chat-content {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Input Area */
+#chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input-area input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#chat-input-area button {
+    margin-left: 5px;
+    padding: 8px 16px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#chat-input-area button:hover {
+    background-color: #005bb5;
+}
+
+/* User Message */
+.user-message {
+    align-self: flex-end;
+    /* Align to the right */
+    background-color: #0078d7;
+    /* Distinct background for user */
+    color: white;
+    /* Text color */
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    /* Rounded corners */
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    /* Wrap text for long messages */
+}
+
+/* Bot Message */
+.bot-message {
+    align-self: flex-start;
+    /* Align to the left */
+    background-color: #f1f1f1;
+    /* Light gray background for bot */
+    color: #333;
+    /* Dark text color */
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    /* Rounded corners */
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    /* Wrap text for long messages */
+}
+
+/* Messages Container */
+#messages {
+    display: flex;
+    flex-direction: column;
+    /* Stack messages vertically */
+    gap: 5px;
+    /* Space between messages */
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+}
+
+
+@media (max-width: 1113px) {
+    .search {
+        display: none;
+    }
+}
+
+@media (max-width: 836px) {
+    .menu {
+        display: none;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 604px) {
+    .search {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    #hamburger-icon {
+        display: block;
+        margin-right: 144px;
+        color: white;
+    }
+    .login-container {
+        width: 45%;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .blog-container {
+        width: 90%;
+    }
+}
+
+/* Menu overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a0436;
+    color: white;
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* Close button */
+.menu-header {
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+}
+
+.close {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menu list */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-list li {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-list li a:hover {
+    text-decoration: underline;
+}
+
+/* CTA section */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.cta button {
+    background-color: white;
+    color: #1a0436;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cta button:hover {
+    background-color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-list li {
+        font-size: 1.2rem;
+    }
 }
